@@ -17,12 +17,13 @@ import javax.persistence.*;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column
     private long ID;
-
+    @Column
     private String name;
-
+    @Column
     private String password;
-
+    @Column
     private String role;
 
 }

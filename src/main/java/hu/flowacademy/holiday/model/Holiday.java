@@ -18,12 +18,21 @@ public class Holiday {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column
     private long Id;
-    private String boss;
-    private String name;
+    @ManyToOne
+    @JoinColumn
+    private User boss;
+    @ManyToOne
+    @JoinColumn
+    private User user;
+    @Column
     private LocalDate startDate;
+    @Column
     private LocalDate endDate;
+    @Column
     private HolidayType type;
+    @Column
     private StatusType status;
 
     public enum HolidayType {

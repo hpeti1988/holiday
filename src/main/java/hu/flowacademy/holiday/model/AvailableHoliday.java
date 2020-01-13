@@ -17,10 +17,13 @@ import java.time.LocalDate;
 public class AvailableHoliday {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column
     private long ID;
     @OneToOne
-    private User user;
+        private User user;
+    @Column
     private int countOfHoliday = 20;
+    @Column
     private int extraHoliday = 0;
 }
 
